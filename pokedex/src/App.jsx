@@ -1,5 +1,6 @@
 const title = "Bonjour les <strong>gens</strong>"
 const style = {color: 'red', backgroundColor: 'blue'}
+const showTitle = false
 
 function App() {
 
@@ -8,7 +9,13 @@ function App() {
   }
 
   return <>
-    <h1 onClick={handleClick} id="title" className="title" style={style}>{title}</h1>
+    {
+      showTitle ? 
+      <h1 id="title" className="title" style={style}>
+        {title}
+      </h1> : 
+      <p>demo</p>
+    }
     <input type="text"/>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum esse possimus reprehenderit consequatur dolorem cupiditate cum tempora commodi a cumque tempore, fugit voluptatem, minima in saepe quia nihil dignissimos. Distinctio.
